@@ -1,15 +1,9 @@
 # evaluation2 #
 
-Ceci est un thème pour le site d'apical.
+Ceci est un thème WordPress inspiré du site apical créé par Christiane Lagacé (www.apical.xyz).
 
-Les pages vont toujours avoir un header et un footer.
+Ce thème est un travail évalué demandé par Nicolas Leblanc
 
-Pour le contenu:
+# Autheur #
 
-le post à un commentaire et le commentaire redirige vers l'accueil.
-
-Se fier en grande partie sur apical
-
-le style doit être constament pareille tout le long du thème.
-
-Faire une page 404 (page not found) avec le même style.
+Émile Béliveau
