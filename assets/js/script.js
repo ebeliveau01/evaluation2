@@ -40,11 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function changeDisplay(elementDisplay) {
-        if (elementDisplay.style.display === 'none' || elementDisplay.style.display === '') {
-            elementDisplay.style.display = 'block';
-        } else {
-            elementDisplay.style.display = 'none';
-        }
+        elementDisplay.style.display = 'block';
     };
 
     function postComWrapEvent() {
