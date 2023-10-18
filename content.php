@@ -10,7 +10,7 @@
                     <div class="boutonshaut">
                         <div class="float-left"></div>
                         <div class="float-right">
-                            <a id="developperreduire" href="#" class="btn btn-secondary" role="button" data-developper="Tout développer" data-reduire="Tout réduire">Tout développer</a>
+                            <a id="developperreduire" href="#" class="btn btn-secondary" role="button" data-dev="on">Tout développer</a>
                         </div>
                         <div class="push"></div>
                     </div>

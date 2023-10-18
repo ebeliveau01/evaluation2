@@ -1,3 +1,8 @@
+    <?php 
+        if(isset($_GET['login']) && $_GET['login'] === 'failed') {
+            $erreurLogin = true;
+        }
+    ?>
     <footer>
             <div class="container">
                 <div class="row">
@@ -15,16 +20,11 @@
                 </div>
             </div>
     </footer>
-        <div class="popupchristiane" id="popupauthentification">
-            <div id="menuusager" class="cache">
-                <p><label id="prenomnomfamille"></label></p>
-                <a class="btn btn-secondary" href="https://apical.xyz/usagers/-1/modification">Profil</a>
-                <a class="btn btn-secondary" id="deconnecter" href="#">Déconnecter</a>
-            </div>
+        <div class="popupchristiane" id="popupauthentification" <?php if($erreurLogin) { echo 'style="display:block;"'; } ?>>
             <div id="formulaireauthentification">
-                <span id="messageauthentification"></span>
-                <form method="post" action="https://apical.xyz/usagers/authentifier" class="form-horizontal">
-                    <input type="hidden" name="_token" value="LpyYoRaSCm46Y0a1JnUCGFQVmLBUfT6a8JNmUCHO">
+                <span id="messageauthentification"><?php if($erreurLogin) { echo 'Mauvais utilisateur ou mot de passe'; } ?></span>
+                <form method="post" action="<?php echo esc_url(wp_login_url()); ?>" class="form-horizontal" id="authentification">
+                    <input type="hidden" name="action" value="custom_login">
                     <div class="form-group row">
                         <label for="login" class="control-label col-sm-5 requis">Usager: </label>
                         <div class="col-sm-6">
@@ -41,8 +41,8 @@
                         <div class="control-label col-sm-5"></div>
                         <div class="col-sm-6">
                             <div class="form-check">
-                                <label for="resterconnecte" class="form-check-label" checked="">
-                                    <input class="form-check-input" type="checkbox" id="resterconnecte" name="resterconnecte">
+                                <label for="resterconnecter" class="form-check-label" checked="">
+                                    <input class="form-check-input" type="checkbox" id="resterconnecter" name="resterconnecter">
                                     Rester connecté
                                 </label>
                             </div>
@@ -51,19 +51,13 @@
                     <div class="form-group row">
                         <div class="control-label col-sm-5"></div>
                         <div class="col-sm-6">
-                            <a id="soumettreauthentification" class="btn btn-secondary" href="#">Soumettre</a>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="control-label col-sm-5"></div>
-                        <div class="col-sm-6">
-                            <a href="https://apical.xyz/usagers/creation">Nouvel usager</a>
+                            <button type="submit" class="btn btn-secondary" name="soumettre">Soumettre</button>
                         </div>
                     </div>
                 </form>
                 
             </div>
-            <span class="boutonrefermer"></span>
+            <span id="btnfermer" class="boutonrefermer"></span>
         </div>
         <?php wp_footer() ?>
     </body>

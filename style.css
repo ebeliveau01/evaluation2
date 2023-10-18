@@ -1,12 +1,13 @@
 /*
-Theme Name: Apical
-Description: Un thème qui est inspiré du site apical.xyz
+    Theme Name: Apical
+    Description: Un thème qui est inspiré du site apical.xyz
+    Author: Émile Béliveau
 */
 
 #popupauthentification {
     position: absolute;
-    top: 150px;
-    right: 205px;
+    top: 225px;
+    right: 465px;
 }
 
 body {
@@ -1814,33 +1815,8 @@ textarea.form-control {
     background-color: #fff;
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
-    border-radius: .25rem
-}
-
-.card>hr {
-    margin-right: 0;
-    margin-left: 0
-}
-
-.card>.list-group {
-    border-top: inherit;
-    border-bottom: inherit
-}
-
-.card>.list-group:first-child {
-    border-top-width: 0;
-    border-top-left-radius: calc(.25rem - 1px);
-    border-top-right-radius: calc(.25rem - 1px)
-}
-
-.card>.list-group:last-child {
-    border-bottom-width: 0;
-    border-bottom-right-radius: calc(.25rem - 1px);
-    border-bottom-left-radius: calc(.25rem - 1px)
-}
-
-.card>.card-header+.list-group,.card>.list-group+.card-footer {
-    border-top: 0
+    border-radius: .25rem;
+    padding: 2px 2px 2px 2px;
 }
 
 .card-body {
@@ -1879,7 +1855,8 @@ textarea.form-control {
 }
 
 .card-header:first-child {
-    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+    border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+    padding: 5px 20px 0px 20px;
 }
 
 .card-footer {
@@ -2905,7 +2882,7 @@ html {
     box-sizing: inherit
 }
 
-.container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl {
+.container {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
@@ -4203,7 +4180,7 @@ form .regroupement .titre {
     }
 
     .card-header {
-        height: 42px
+        height: 42px;
     }
 
     .avant input[type=image] {
