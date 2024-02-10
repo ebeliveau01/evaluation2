@@ -6,4 +6,4 @@ Ce thème est un travail évalué demandé par Nicolas Leblanc
 
 # Autheur #
 
-Émile Béliveau
+Émile Béliveau.
